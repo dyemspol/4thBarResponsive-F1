@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Zen+Dots&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: url(f1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 1.5rem 10%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(35, 35, 35);
+
+  z-index: 100;
+}
+.menu {
+  display: flex;
+  gap: 25px;
+}
+.menu a {
+  font-size: 1.1rem;
+}
+.menulist {
+  color: rgb(255, 255, 255);
+}
+label i {
+  font-size: 1.5rem;
+  display: none;
+}
+#check {
+  display: none;
+}
+label {
+  display: none;
+  color: white;
+}
+.closed-icon {
+  font-size: 1.3rem;
+}
+@media (max-width: 620px) {
+  .icons {
+    display: inline-flex;
+  }
+  .icons .bx-x {
+    display: none;
+  }
+  /* .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.308);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+
+    gap: 40px;
+  } */
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(35, 35, 35); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Apply blur effect */
+    overflow: hidden;
+    gap: 40px;
+    transition: height 0.3s ease; /* Smooth transition */
+  }
+
+  #check:checked ~ .menu {
+    height: 91.5vh;
+  }
+  #check:checked ~ .icons .menu-icon {
+    display: none;
+  }
+  #check:checked ~ .icons .closed-icon {
+    display: inline-block;
+  }
+
+  .menu a {
+    padding: 1.1rem 0px;
+  }
+}
